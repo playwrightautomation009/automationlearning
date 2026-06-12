@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Practice - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <h1>Automation Testing Practice</h1>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="playwrightpractice.html">PlaywrightPractice</a>
+    </nav>
+</header>
+
+<main class="content">
+
+    <!-- Play With Inputs -->
+    <section id="gui-elements">
+        <h2>Play With Inputs</h2>
+
+        <label>Name:</label>
+        <input type="text" id="name_input">
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" id="email_input">
+
+        <br><br>
+
+        <label>Phone:</label>
+        <input type="text" id="phone_input">
+
+        <br><br>
+
+        <label>Address:</label><br>
+        <textarea id="address_input" rows="3"></textarea>
+
+        <br><br>
+
+        <p>Gender:</p>
+        <label><input type="radio" name="gender" id="gender_male" value="Male"> Male</label>
+        <label><input type="radio" name="gender" id="gender_female" value="Female"> Female</label>
+
+        <br><br>
+
+        <p>Days:</p>
+        <label><input type="checkbox" value="sun" id="day_sun"> Sunday</label>
+        <label><input type="checkbox" value="mon" id="day_mon"> Monday</label>
+        <label><input type="checkbox" value="tue" id="day_tue"> Tuesday</label>
+        <label><input type="checkbox" value="wed" id="day_wed"> Wednesday</label>
+        <label><input type="checkbox" value="thur" id="day_thu"> Thursday</label>
+        <label><input type="checkbox" value="fri" id="day_fri"> Friday</label>
+        <label><input type="checkbox" value="sat" id="day_sat"> Saturday</label>
+
+        <br><br>
+
+        <label>Proviences:</label>
+        <select class="form-control" id="Proviences_select">
+            <option value="BC">British Columbia</option>
+            <option value="AB">Alberta</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="MB">Manitoba</option>
+			<option value="ON">Ontario</option>
+            <option value="QC">Quebec</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NS">Nova Scotia</option>
+			<option value="PE">Prince Edward Island</option>
+			<option value="NL">Newfoundland and Labrador</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="YT">Yukon</option>
+        </select>
+
+        <br><br>
+
+        <label>Colors:</label>
+        <select class="form-control" id="color_select" multiple>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="white">White</option>
+        </select>
+
+        <br><br>
+
+        <label for="animals">Sorted List:</label><br>
+        <select class="form-control" id="animals_list" multiple name="animals_list">
+            <option value="cat">Cat</option>
+            <option value="cheetah">Cheetah</option>
+            <option value="deer">Deer</option>
+            <option value="dog">Dog</option>
+            <option value="elephant">Elephant</option>
+            <option value="fox">Fox</option>
+            <option value="girafee">Giraffe</option>
+            <option value="lion">Lion</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="zebra">Zebra</option>
+        </select>
+    </section>
+
+    <hr>
+
+    <!-- DATE PICKERS -->
+    <section id="date-pickers">
+        <h2>Date Pickers</h2>
+
+        <label>Date Picker 1 (mm/dd/yyyy):</label>
+        <input type="date" id="date_mmdd">
+
+        <br><br>
+
+        <label>Date Picker 2 (dd/mm/yyyy):</label>
+        <input type="date" id="date_ddmm">
+
+        <br><br>
+
+        <label>Date Range:</label>
+        <input type="date" id="date_from">
+        <span>to</span>
+        <input type="date" id="date_to">
+    </section>
+
+    <hr>
+
+    <!-- UPLOAD FILES -->
+    <section id="upload-files">
+        <h2>Upload Files</h2>
+
+        <p>Upload Single File:</p>
+        <input type="file" id="file_single">
+        <button id="btn_upload_single">Upload</button>
+        <p id="msg_upload_single" class="msg"></p>
+
+        <p>Upload Multiple Files:</p>
+        <input type="file" id="file_multi" multiple>
+        <button id="btn_upload_multi">Upload</button>
+        <p id="msg_upload_multi" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- STATIC WEB TABLE -->
+    <section id="static-table">
+        <h2>Static Web Table</h2>
+
+        <table class="table" id="table_static">
+            <thead>
+                <tr>
+                    <th>BookName</th>
+                    <th>Author</th>
+                    <th>Subject</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Learn Selenium</td><td>Amit</td><td>Selenium</td><td>300</td></tr>
+                <tr><td>Learn Java</td><td>Mukesh</td><td>Java</td><td>500</td></tr>
+                <tr><td>Learn JS</td><td>Animesh</td><td>Javascript</td><td>300</td></tr>
+                <tr><td>Master In Selenium</td><td>Mukesh</td><td>Selenium</td><td>3000</td></tr>
+                <tr><td>Master In Java</td><td>Amod</td><td>JAVA</td><td>2000</td></tr>
+                <tr><td>Master In JS</td><td>Amit</td><td>Javascript</td><td>1000</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- DYNAMIC WEB TABLE -->
+    <section id="dynamic-table">
+        <h2>Dynamic Web Table</h2>
+        <button id="btn_refresh_metrics">Refresh Metrics</button>
+
+        <table class="table" id="table_dynamic">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>CPU (%)</th>
+                    <th>Memory (MB)</th>
+                    <th>Network (Mbps)</th>
+                    <th>Disk (MB/s)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filled by JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- PAGINATION TABLE -->
+    <section id="pagination-table">
+        <h2>Pagination Web Table</h2>
+
+        <table class="table" id="table_pagination">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filled by JS -->
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button class="page-btn" data-page="1">1</button>
+            <button class="page-btn" data-page="2">2</button>
+            <button class="page-btn" data-page="3">3</button>
+            <button class="page-btn" data-page="4">4</button>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- TABS -->
+    <section id="tabs">
+        <h2>Tabs</h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+            <button class="tab-btn" data-tab="tab2">Tab 2</button>
+            <button class="tab-btn" data-tab="tab3">Tab 3</button>
+        </div>
+
+        <div class="tab-content active" id="tab1">
+            <p>Content of Tab 1</p>
+        </div>
+        <div class="tab-content" id="tab2">
+            <p>Content of Tab 2</p>
+        </div>
+        <div class="tab-content" id="tab3">
+            <p>Content of Tab 3</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- DYNAMIC BUTTON -->
+    <section id="dynamic-button">
+        <h2>Dynamic Button</h2>
+        <button id="btn_start">START</button>
+        <p id="msg_start" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- ALERTS & POPUPS -->
+    <section id="alerts">
+        <h2>Alerts & Popups</h2>
+
+        <button id="btn_alert_simple">Simple Alert</button>
+        <button id="btn_alert_confirm">Confirmation Alert</button>
+        <button id="btn_alert_prompt">Prompt Alert</button>
+        <button id="btn_new_tab">New Tab</button>
+        <button id="btn_popup_window">Popup Window</button>
+
+        <p id="msg_alerts" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- MOUSE HOVER -->
+    <section id="mouse-hover">
+        <h2>Mouse Hover</h2>
+
+        <div class="hover-menu">
+            <button id="btn_hover">Point Me</button>
+            <div class="hover-dropdown" id="hover_dropdown">
+                <p>Link 1</p>
+                <p>Link 2</p>
+                <p>Link 3</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- DOUBLE CLICK -->
+    <section id="double-click">
+        <h2>Double Click</h2>
+
+        <input type="text" id="dc_source" value="Hello World!">
+        <input type="text" id="dc_target" placeholder="Copy Text">
+        <button id="btn_double_click">Double Click Me</button>
+    </section>
+
+    <hr>
+
+    <!-- DRAG AND DROP -->
+    <section id="drag-drop">
+        <h2>Drag and Drop</h2>
+
+        <div id="drag_container">
+            <div id="drag_item" draggable="true" class="drag-box">Drag me to my target</div>
+            <div id="drop_zone" class="drop-box">Drop here</div>
+        </div>
+
+        <p id="msg_drag" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- SLIDER -->
+    <section id="slider">
+        <h2>Slider</h2>
+
+        <input type="range" id="price_slider" min="75" max="300" value="150">
+        <span id="price_value">150</span>
+    </section>
+
+    <hr>
+
+    <!-- SVG ELEMENTS -->
+    <section id="svg-elements">
+        <h2>SVG Elements</h2>
+        <svg width="200" height="100">
+            <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="3" fill="lightblue"></circle>
+        </svg>
+    </section>
+
+    <hr>
+
+    <!-- SCROLLING -->
+    <section id="scrolling">
+        <h2>Scrolling</h2>
+        <div style="height:200px; overflow-y:scroll; border:1px solid #ccc; padding:10px;">
+            <p>Scrollable content...</p>
+            <p>More content...</p>
+            <p>More content...</p>
+            <p>More content...</p>
+            <p>More content...</p>
+            <p>More content...</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- DROPDOWN LABELS & LINKS -->
+    <section id="dropdown-labels">
+        <h2>Dropdown Labels & Links</h2>
+
+        <p>Mobiles:</p>
+        <ul>
+            <li>Samsung</li>
+            <li>Real Me</li>
+            <li>Moto</li>
+        </ul>
+
+        <p>Laptops:</p>
+        <ul>
+            <li>Apple</li>
+            <li>Lenovo</li>
+            <li>Dell</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- BROKEN LINKS -->
+    <section id="broken-links">
+        <h2>Broken Links</h2>
+
+        <ul>
+            <li><a href="https://httpstat.us/400" target="_blank">400</a></li>
+            <li><a href="https://httpstat.us/401" target="_blank">401</a></li>
+            <li><a href="https://httpstat.us/403" target="_blank">403</a></li>
+            <li><a href="https://httpstat.us/404" target="_blank">404</a></li>
+            <li><a href="https://httpstat.us/408" target="_blank">408</a></li>
+            <li><a href="https://httpstat.us/500" target="_blank">500</a></li>
+            <li><a href="https://httpstat.us/502" target="_blank">502</a></li>
+            <li><a href="https://httpstat.us/503" target="_blank">503</a></li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- VISITORS FORM -->
+    <section id="visitors-form">
+        <h2>Visitors Form</h2>
+
+        <h3>Section 1</h3>
+        <p>Some text for section 1.</p>
+        <button class="visitor_btn" data-section="1">Submit Section 1</button>
+
+        <h3>Section 2</h3>
+        <p>Some text for section 2.</p>
+        <button class="visitor_btn" data-section="2">Submit Section 2</button>
+
+        <h3>Section 3</h3>
+        <p>Some text for section 3.</p>
+        <button class="visitor_btn" data-section="3">Submit Section 3</button>
+
+        <p id="msg_visitor" class="msg"></p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 Automation Learning</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

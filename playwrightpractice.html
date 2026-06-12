@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Practice - PlaywrightPractice</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <h1>Automation Testing Practice For Selenium, Cypress & Playwright</h1>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">Udemy Courses</a>
+        <a href="#">Online Trainings</a>
+        <a href="#">Blog</a>
+        <a href="playwrightpractice.html">PlaywrightPractice</a>
+    </nav>
+</header>
+
+<main class="content">
+
+    <!-- INTRO -->
+    <section id="pw-intro">
+        <h2>PlaywrightPractice</h2>
+        <p>
+            This page contains elements useful for Playwright, Selenium, Cypress and other UI automation tools.
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- LOGIN FORM -->
+    <section id="pw-login">
+        <h2>Login Form</h2>
+
+        <label for="pw_username">Username:</label>
+        <input type="text" id="pw_username">
+
+        <br><br>
+
+        <label for="pw_password">Password:</label>
+        <input type="password" id="pw_password">
+
+        <br><br>
+
+        <button id="pw_btn_login">Login</button>
+        <p id="pw_msg_login" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- DROPDOWNS -->
+    <section id="pw-dropdowns">
+        <h2>Dropdown & Multi-Select</h2>
+
+        <label for="pw_country">Select Country:</label>
+        <select id="pw_country">
+            <option value="">Select</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>Canada</option>
+            <option>Australia</option>
+        </select>
+
+        <br><br>
+
+        <label for="pw_skills">Select Skills (Multi-Select):</label>
+        <select id="pw_skills" multiple size="4">
+            <option>Playwright</option>
+            <option>Selenium</option>
+            <option>Cypress</option>
+            <option>Puppeteer</option>
+        </select>
+
+        <br><br>
+
+        <button id="pw_btn_dropdown">Show Selection</button>
+        <p id="pw_msg_dropdown" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- ALERTS -->
+    <section id="pw-alerts">
+        <h2>Alerts</h2>
+
+        <button id="pw_btn_alert_simple">Simple Alert</button>
+        <button id="pw_btn_alert_confirm">Confirmation Alert</button>
+        <button id="pw_btn_alert_prompt">Prompt Alert</button>
+
+        <p id="pw_msg_alert" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- NEW TAB & POPUP -->
+    <section id="pw-tabs-popups">
+        <h2>New Tab & Popup Window</h2>
+
+        <button id="pw_btn_new_tab">Open New Tab</button>
+        <button id="pw_btn_popup_window">Open Popup Window</button>
+    </section>
+
+    <hr>
+
+    <!-- FILE UPLOAD -->
+    <section id="pw-upload">
+        <h2>File Upload</h2>
+
+        <input type="file" id="pw_file">
+        <button id="pw_btn_file">Upload</button>
+        <p id="pw_msg_file" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- IFRAME -->
+    <section id="pw-iframe">
+        <h2>iFrame Practice</h2>
+
+        <iframe
+            id="pw_iframe"
+            srcdoc="<h3 style='text-align:center;'>Inside iFrame</h3><p style='text-align:center;'>Automate me!</p>"
+            style="width:100%; height:150px; border:1px solid #ccc;">
+        </iframe>
+    </section>
+
+    <hr>
+
+    <!-- DRAG & DROP -->
+    <section id="pw-drag-drop">
+        <h2>Drag and Drop</h2>
+
+        <div id="pw_drag_container">
+            <div id="pw_drag_item" draggable="true" class="drag-box">
+                Drag Me
+            </div>
+            <div id="pw_drop_zone" class="drop-box">
+                Drop Here
+            </div>
+        </div>
+
+        <br>
+
+        <div id="pw_circle_container">
+            <div id="pw_circle_drag" draggable="true" class="circle">A</div>
+            <div id="pw_circle_drop" class="circle-drop">Drop Circle Here</div>
+        </div>
+
+        <p id="pw_msg_drag" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- HIDDEN ELEMENTS & AJAX -->
+    <section id="pw-hidden-ajax">
+        <h2>Hidden Elements & AJAX Loader</h2>
+
+        <button id="pw_btn_toggle_hidden">Toggle Hidden Inputs</button>
+
+        <div id="pw_hidden_area" style="display:none; margin-top:10px;">
+            <input type="text" id="pw_hidden_input" placeholder="Hidden input">
+            <label><input type="checkbox" id="pw_hidden_checkbox"> Hidden checkbox</label>
+        </div>
+
+        <br><br>
+
+        <button id="pw_btn_ajax">Start AJAX Load</button>
+        <div id="pw_ajax_loader" style="display:none; margin-top:10px;">Loading...</div>
+        <p id="pw_msg_ajax" class="msg"></p>
+    </section>
+
+    <hr>
+
+    <!-- SHADOW DOM -->
+    <section id="pw-shadow">
+        <h2>Shadow DOM Practice</h2>
+        <div id="pw_shadow_host"></div>
+    </section>
+
+    <hr>
+
+    <!-- DYNAMIC LOADING -->
+    <section id="pw-dynamic-loading">
+        <h2>Dynamic Loading</h2>
+
+        <button id="pw_btn_load">Load Content</button>
+
+        <div id="pw_loader" style="display:none; margin-top:20px;">
+            <p>Loading...</p>
+        </div>
+
+        <div id="pw_loaded_content" style="display:none; margin-top:20px;">
+            <p>Dynamic content loaded successfully!</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- MODAL -->
+    <section id="pw-modal">
+        <h2>Modal Dialog</h2>
+
+        <button id="pw_btn_open_modal">Open Modal</button>
+
+        <div id="pw_modal" class="modal">
+            <div class="modal-content">
+                <span id="pw_btn_close_modal" class="modal-close">&times;</span>
+                <h3>Automation Modal</h3>
+                <p>This is a custom modal dialog for automation practice.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- FAKE API -->
+    <section id="pw-api">
+        <h2>Fake API Request</h2>
+
+        <button id="pw_btn_api">Fetch Data</button>
+        <p id="pw_msg_api" class="msg"></p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2024 Automation Practice</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
